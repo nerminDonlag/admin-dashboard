@@ -135,7 +135,6 @@ body {
 }
 
 .main-column1 {
-  border: 1px solid red;
   margin-right: 16px;
 }
 
@@ -185,5 +184,39 @@ body {
 }
 
 .cards-container {
-  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border-radius: 12px;
+  border-left: 12px solid orange;
+  padding: 36px 24px 36px 24px;
+  background-color: var(--sidebar-txt);
+  height: 168px;
+  line-height: 18px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-title {
+  font-size: large;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.card-icons {
+  position: absolute;
+  bottom: 36px;
+  right: 36px;
+}
+
+.card-icons > span {
+  margin-left: 12px;
 }

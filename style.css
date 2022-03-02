@@ -4,13 +4,14 @@
   font-family: 'Poppins', sans-serif;
   --sidebar-color: #0891b2;
   --sidebar-txt: white;
+  --main-background: #ddd;
 }
 
 body {
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 220px 1fr;
   grid-template-areas:
   "sidebar header"
   "sidebar main-content"
@@ -38,7 +39,7 @@ body {
 }
 
 .sidebar {
-  padding: 30px;
+  padding: 36px 12px;
   grid-area: sidebar;
   background-color: var(--sidebar-color);
   color: var(--sidebar-txt);
@@ -46,6 +47,7 @@ body {
   font-weight: 900;
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(11, 28px);
   gap: 20px;
 }
 
@@ -61,7 +63,10 @@ body {
 
 .main-content {
   grid-area: main-content;
-  background-color: yellowgreen; /* temp */
+  background-color: var(--main-background);
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  padding: 32px 16px;
 }
 
 .avatar-top {
@@ -89,7 +94,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: large;
   padding-left: 8px;
-  background-color: #eee;
+  background-color: var(--main-background);
   width: clamp(280px, 40%, 400px);
 }
 
@@ -127,4 +132,58 @@ body {
   font-weight: 900;
   padding: 8px 24px;
   border-radius: 24px;
+}
+
+.main-column1 {
+  border: 1px solid red;
+  margin-right: 16px;
+}
+
+.announcements-container, .trending-container {
+  background-color: var(--sidebar-txt);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.title-projects, .title-announcements, .title-trending {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.title-trending {
+  margin-top: 32px;
+}
+
+.announcement-card {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.announcement-card > div:first-child {
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.trending {
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.trending-container > div:last-child {
+  margin-bottom: 0;
+}
+
+.txt-trending {
+  display: inline-block;
+}
+
+.name-trending {
+  font-weight: 900;
+}
+
+.cards-container {
+  border: 1px solid green;
 }

@@ -36,6 +36,8 @@ body {
   grid-area: header;
   display: grid;
   grid-template-rows: 60px 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  z-index: 0;
 }
 
 .sidebar {
@@ -47,7 +49,7 @@ body {
   font-weight: 900;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(11, 28px);
+  grid-template-rows: repeat(12, 28px);
   gap: 20px;
 }
 
@@ -100,7 +102,13 @@ body {
 
 .search-bar > input:focus {
   outline: none;
+  background-color: #e4e4e7;
   border: 1px solid gray;
+}
+
+.search-bar > input:hover {
+  outline: none;
+  background-color: #e4e4e7;
 }
 
 .header-row2 {
@@ -219,4 +227,12 @@ body {
 
 .card-icons > span {
   margin-left: 12px;
+}
+
+.mdi, .side-txt, button, .card-title, .name-trending, .disc-trending, .announcement-card > div:first-child {
+  cursor: pointer;
+}
+
+.side-txt:hover, button:hover, a:hover {
+  color: gold;
 }

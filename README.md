@@ -3,6 +3,7 @@ A TOP project
 
 I made the page responsive
 
-Future improvements ideas:
+Future improvement ideas:
  - add my own projects as links
- - mage a mobile version
+ - make a mobile version
+ - left sidebar icon and text should both light up on hover
